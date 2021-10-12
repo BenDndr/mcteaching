@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h1 {
+    font-family: $man-font;
+}
+
+.f300 {
+    font-weight: 300;
+}
