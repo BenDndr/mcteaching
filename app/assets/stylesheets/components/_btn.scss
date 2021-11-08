@@ -12,6 +12,39 @@
     }
 }
 
+.btn-yel {
+    height: 2rem;
+    padding: .5rem 1rem;
+    border-radius: 16px;
+    background-color: $yellow;
+    color: $blue;
+    transition: ease .5s;
+
+    &:hover {
+        background: $blue;
+        color: white;
+    }
+}
+
+.btn-blue {
+    height: 2rem;
+    padding: .5rem 1rem;
+    border-radius: 16px;
+    background-color: $blue;
+    color: white;
+    transition: ease .5s;
+
+    &:hover {
+        background: $lightblue;
+    }
+}
+
+.btn-box {
+    height: 5rem;
+    display: grid;
+    place-items: center;
+}
+
 a:hover {
     text-decoration:none;
 }

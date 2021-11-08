@@ -12,10 +12,17 @@
 @import "components/index";
 @import "pages/index";
 
-h1 {
+h1, h2 {
     font-family: $man-font;
 }
 
 .f300 {
     font-weight: 300;
+}
+
+.full-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
 }

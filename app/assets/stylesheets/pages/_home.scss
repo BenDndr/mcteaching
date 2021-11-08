@@ -1,1 +1,24 @@
-// Specific CSS for your home-page
+.pres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $blue;
+    color: white;
+    padding: 3rem;
+}
+
+.concept {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.witness {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $lightyellow;
+    color: white;
+    padding: 3rem;
+}

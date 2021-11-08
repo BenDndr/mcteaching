@@ -18,3 +18,15 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.round-pic {
+  height: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.tds {
+  background-image: url(/assets/Tête-de-Schlouki.png);
+  background-size: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
