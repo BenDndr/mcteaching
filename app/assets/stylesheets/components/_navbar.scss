@@ -1,8 +1,10 @@
 .navbar-lewagon {
   position: fixed;
   width: 100%;
+  height: 3rem;
   justify-content: space-between;
   background: $blue;
+  border-bottom: solid 1px white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,9 +13,18 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
+  transition: ease .3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: $yellow;
 }
 
 .nav-icon {
   color: white;
   font-family: $man-font;
+}
+
+.nav-item:hover {
+  color: $yellow;
 }

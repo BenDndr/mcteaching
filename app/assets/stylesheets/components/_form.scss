@@ -1,5 +1,14 @@
+.formbox {
+    padding-top: 4rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue;
+}
+
 .form-container {
-    height: 100%;
     background-color: $blue;
     color: white;
     padding: 0 30%;
