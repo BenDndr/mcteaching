@@ -1,7 +1,12 @@
 <div class="banner">
     <h1>MCTeaching</h1>
     <p class="f300">Cours particulier à domicile, mathématique et physique</p>
-    <%= link_to "S'identifier", new_user_session_path, class: "btn-trans" %>
+    <% if user_signed_in? %>
+        <%= link_to "Create Lesson", new_lesson_path, class: "btn-trans" %>
+        <%= link_to "View lessons", lessons_path, class: "btn-trans" %>
+    <% else %>
+        <%= link_to "S'identifier", new_user_session_path, class: "btn-trans" %>
+    <% end %>
 </div>
 
 <div class="concept m-5">

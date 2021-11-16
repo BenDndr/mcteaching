@@ -1,0 +1,9 @@
+<div class="yelbox">
+    <% if @lessons.length == 0 %>
+         <p>Pas de cours disponnible</p>
+    <% else %>
+        <% @lessons.each do |lesson| %>     
+            <%= lesson %>   
+        <% end %>  
+    <% end %>
+</div>

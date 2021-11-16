@@ -11,29 +11,14 @@
                     autofocus: true,
                     input_html: { autocomplete: "email" }%>
         <%= f.input :first_name,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "first_name" }%>
+                    required: true %>
         <%= f.input :last_name,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "last_name" }%>
-        <%= f.input :degree,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "degree" }%>
-        <%= f.input :adress,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "adress" }%>
-        <%= f.input :city,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "city" }%>
-        <%= f.input :birth_date,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "birth_date" }%>
+                    required: true %>
+        <%= f.input :degree %>
+        <%= f.input :phone_number %>
+        <%= f.input :adress %>
+        <%= f.input :city %>
+        <%= f.input :birth_date %>
         <%= f.input :password,
                     required: true,
                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
