@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_11_09_161433) do
   end
 
   create_table "lessons", force: :cascade do |t|
-    t.datetime "date"
+    t.date "date"
     t.string "course"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

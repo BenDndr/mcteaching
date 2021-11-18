@@ -2,22 +2,21 @@
     <div class="form-container-yel">
         <h1>Créer une lesson</h1>
 
+        <%= simple_form_for(@lesson) do |f| %>
+        <div class="form-inputs">
+            <%= f.input :course,
+                        required: true %>
+            <%= f.input :date,
+                        required: true %>
+            <%= f.input :length,
+                        required: true %>
+            <%= f.input :beginning,
+                        required: true %>
+        </div>
 
-        <form class="new_lesson" id="new_lesson" action="/lessons" accept-charset="UTF-8" method="post">
-        <label for="course">Course</label>
-        <input type="text" name="lesson[course]" id="course">
-        <label for="date">Date</label>
-        <input type="text" name="lesson[date]" id="date">
-        <label for="length">Length</label>
-        <input type="text" name="lesson[length]" id="length">
-        <label for="beginning">Begin</label>
-        <input type="text" name="lesson[beginning]" id="beginning">
-        <input type="submit" name="commit" value="Create Lesson" data-disable-with="Create Lesson">
-        </form>
-
-        <%= form_for(@lesson) do |f| %>
-            <%= f.label :course %>
-            <%= f.text_field :course %>
+        <div class="form-actions">
+            <%= f.button :submit, "Create Lesson" %>
+        </div>
         <% end %>
     </div>
 </div>

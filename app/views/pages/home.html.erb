@@ -2,8 +2,12 @@
     <h1>MCTeaching</h1>
     <p class="f300">Cours particulier à domicile, mathématique et physique</p>
     <% if user_signed_in? %>
-        <%= link_to "Create Lesson", new_lesson_path, class: "btn-trans" %>
-        <%= link_to "View lessons", lessons_path, class: "btn-trans" %>
+        <div class="d-flex">
+        <% if current_user.marie %>
+            <%= link_to "Create Lesson", new_lesson_path, class: "btn-trans" %>
+        <% end %>
+            <%= link_to "View lessons", lessons_path, class: "btn-trans" %>
+        </div>
     <% else %>
         <%= link_to "S'identifier", new_user_session_path, class: "btn-trans" %>
     <% end %>

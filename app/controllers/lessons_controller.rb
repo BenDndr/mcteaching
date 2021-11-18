@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-    before_action :set_lesson, only[:show, :edit, :update, :destroy]
+    before_action :set_lesson, only:[:show, :edit, :update, :destroy]
 
     def index
         @lessons = Lesson.all
@@ -13,8 +13,13 @@ class LessonsController < ApplicationController
     end
 
     def create
+        
         @lesson = Lesson.create(lesson_params)
-        redirect_to lessons_path
+        if @lesson.save
+            redirect_to lessons_path
+        else
+            render :new
+        end
     end
 
     def edit
@@ -34,7 +39,7 @@ class LessonsController < ApplicationController
     private
 
     def lesson_params
-        params.require(:lesson).permit(:date, :course, :length)
+        params.require(:lesson).permit(:date, :course, :length, :beginning)
     end
 
     def set_lesson
