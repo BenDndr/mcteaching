@@ -1,5 +1,6 @@
 .formbox {
     padding-top: 4rem;
+    padding-bottom: 4rem;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -8,8 +9,51 @@
     background-color: $blue;
 }
 
+.yelbox {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $lightyellow;
+}
+
+.flex-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container-yel {
+    color: $blue;
+    padding: 0 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    a {
+        color: $blue;
+    }
+
+    button {
+        background-color: $blue;
+        color: white;
+    }
+
+    .btn {
+        background-color: $blue;
+        color: white;
+    }
+
+    h2 {
+        font-family: $man-font;
+    }
+}
+
 .form-container {
-    background-color: $blue;
     color: white;
     padding: 0 30%;
     display: flex;

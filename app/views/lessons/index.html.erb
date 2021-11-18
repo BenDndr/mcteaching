@@ -1,0 +1,18 @@
+<div class="yelbox">
+    <div class="flex-columns">
+        <% if @lessons.length == 0 %>
+            <p>Pas de cours disponnible</p>
+        <% else %>
+            <% @lessons.each do |lesson| %>     
+                <%= lesson.course %> 
+                <%= lesson.date %>
+                <%= lesson.beginnig %>
+                <%= lesson.length %>  
+            <% end %>  
+        <% end %>
+    
+        <% if current_user.marie %>
+            <%= link_to "Create Lesson", new_lesson_path, class: "btn-blue" %>
+        <% end %>
+    </div>
+</div>

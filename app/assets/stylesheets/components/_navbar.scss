@@ -28,3 +28,8 @@
 .nav-item:hover {
   color: $yellow;
 }
+
+.dropdown {
+  display: grid;
+  place-items: center;
+}
