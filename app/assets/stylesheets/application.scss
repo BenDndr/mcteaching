@@ -21,8 +21,23 @@ h1, h2 {
 }
 
 .full-page {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+}
+
+.blue.bg {
+    background-color: $blue;
+}
+
+.yel-bg {
+    background-color: $lightyellow;
+}
+
+.center {
+    text-align: center;
 }

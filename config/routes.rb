@@ -8,10 +8,14 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
 
-  resources :lessons
+  resources :rdvs, only: [ :index, :destroy ]
 
-  # namespace :my do
-  #   ressources :users, only: :show
-  #   ressources :lessons, only: :index
-  # end
+  resources :lessons do
+    resources :rdvs, only: [ :new, :create ]
+  end
+
+  namespace :my do
+     resources :rdvs, only: :index
+  #   ressources :rdvs, only: :index
+  end
 end

@@ -12,8 +12,7 @@ class LessonsController < ApplicationController
         @lesson = Lesson.new
     end
 
-    def create
-        
+    def create     
         @lesson = Lesson.create(lesson_params)
         if @lesson.save
             redirect_to lessons_path
@@ -23,15 +22,18 @@ class LessonsController < ApplicationController
     end
 
     def edit
-        
     end
 
     def update
-        @lesson.update(params[:lesson])
-        redirect_to lesson_path(@lesson)
+        @lesson.update(lesson_params)
+        if @lesson.save
+            redirect_to lessons_path
+        else
+            render :new
+        end
     end
 
-    def delete
+    def destroy
         @lesson.destroy
         redirect_to lessons_path
     end
@@ -39,7 +41,7 @@ class LessonsController < ApplicationController
     private
 
     def lesson_params
-        params.require(:lesson).permit(:date, :course, :length, :beginning)
+        params.require(:lesson).permit(:date, :length, :beginning)
     end
 
     def set_lesson

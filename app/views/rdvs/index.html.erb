@@ -1,0 +1,28 @@
+<div class="full-page yel-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                <div class="center">
+                    <h2>Tous les cours</h2>
+                    <% if @rdvs.length == 0 %>
+                        <p>Pas de cours prévu !</p>
+                    <% else %>
+
+                        <% @rdvs.each do |rdv| %>
+                            <div class="lesson-card mb-3">
+                                <p>Date : <%= rdv.lesson.date %></p>
+                                <p>Heure : <%= rdv.lesson.beginning %></p>
+                                <p>Durée : <%= rdv.lesson.length %></p>
+                                <p>Cours : <%= rdv.course %></p>
+                                <%= link_to "Annuler le cours", rdv_path(rdv), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn-base btn-blue mb-1" %>
+                            </div>
+                        <% end %>
+                    
+                    <% end %>
+    
+                    <%= link_to "Voir les crenaux", lessons_path, class: "btn-base btn-blue" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,18 +1,33 @@
-<div class="yelbox">
-    <div class="flex-columns">
-        <% if @lessons.length == 0 %>
-            <p>Pas de cours disponnible</p>
-        <% else %>
-            <% @lessons.each do |lesson| %>     
-                <%= lesson.course %> 
-                <%= lesson.date %>
-                <%= lesson.beginnig %>
-                <%= lesson.length %>  
-            <% end %>  
-        <% end %>
-    
-        <% if current_user.marie %>
-            <%= link_to "Create Lesson", new_lesson_path, class: "btn-blue" %>
-        <% end %>
+<div class="full-page yel-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                <div class="center">
+                <h2>Trouver un crénaux</h2>
+                    <% if current_user.marie %>
+                        <%= link_to "Create Lesson", new_lesson_path, class: "btn-base btn-blue" %>
+                    <% end %>
+                </div>
+
+                <% if @lessons.length == 0 %>
+                    <div class="center mt-1">
+                        <p>Pas de cours disponnible</p>
+                    </div>
+                <% else %>
+                    <% @lessons.each do |lesson| %>  
+                        <div class="lesson-card">                            
+                            <p>Date : <%= lesson.date %></p>
+                            <p>Heure : <%= lesson.beginning %></p>
+                            <p>Durée : <%= lesson.length %></p>
+                            <%= link_to "Prendre rdv", new_lesson_rdv_path(lesson), class: "btn-base btn-blue mb-1"  %>
+                            <% if current_user.marie %>
+                                <%= link_to "Editer la lesson", edit_lesson_path(lesson), class: "btn-base btn-blue mb-1" %>
+                                <%= link_to "Supprimer la lesson", lesson_path(lesson), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn-base btn-blue" %>
+                            <% end %>  
+                        </div>
+                    <% end %>  
+                <% end %>
+            </div>
+        </div>
     </div>
 </div>
