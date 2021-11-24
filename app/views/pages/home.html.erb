@@ -4,12 +4,12 @@
     <% if user_signed_in? %>
         <div class="d-flex">
         <% if current_user.marie %>
-            <%= link_to "Create Lesson", new_lesson_path, class: "btn-trans" %>
+            <%= link_to "Create Lesson", new_lesson_path, class: "btn-base btn-trans" %>
         <% end %>
-            <%= link_to "View lessons", lessons_path, class: "btn-trans" %>
+            <%= link_to "View lessons", lessons_path, class: "btn-base btn-trans" %>
         </div>
     <% else %>
-        <%= link_to "S'identifier", new_user_session_path, class: "btn-trans" %>
+        <%= link_to "S'identifier", new_user_session_path, class: "btn-base btn-trans" %>
     <% end %>
 </div>
 
@@ -32,7 +32,7 @@
 </div>
 
 <div class="btn-box">
-    <%= link_to "S'identifier", new_user_session_path, class: "btn-yel" %>
+    <%= link_to "S'identifier", new_user_session_path, class: "btn-base btn-yel" %>
 </div>
 
 <div class="witness">
