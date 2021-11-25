@@ -19,10 +19,11 @@
                             <p>Date : <%= lesson.date %></p>
                             <p>Heure : <%= lesson.beginning %></p>
                             <p>Durée : <%= lesson.length %></p>
-                            <%= link_to "Prendre rdv", new_lesson_rdv_path(lesson), class: "btn-base btn-blue mb-1"  %>
                             <% if current_user.marie %>
                                 <%= link_to "Editer la lesson", edit_lesson_path(lesson), class: "btn-base btn-blue mb-1" %>
                                 <%= link_to "Supprimer la lesson", lesson_path(lesson), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn-base btn-blue" %>
+                            <% else %>
+                                <%= link_to "Prendre rdv", new_lesson_rdv_path(lesson), class: "btn-base btn-blue mb-1"  %>
                             <% end %>  
                         </div>
                     <% end %>  

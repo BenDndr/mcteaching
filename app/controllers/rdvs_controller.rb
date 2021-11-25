@@ -16,6 +16,7 @@ class RdvsController < ApplicationController
         @rdv.user = current_user
         @rdv.lesson = @lesson
         if @rdv.save
+            @lesson.update_attribute(:available, false) 
             if current_user.marie
                 redirect_to rdvs_path
             else
@@ -27,6 +28,7 @@ class RdvsController < ApplicationController
     end
 
     def destroy
+        @rdv.lesson.update_attribute(:available, true)
         @rdv.destroy
         redirect_to rdvs_path
     end
