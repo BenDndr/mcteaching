@@ -10,6 +10,7 @@
 
                         <% @rdvs.each do |rdv| %>
                             <div class="lesson-card mb-3">
+                                <p>Avec <%= rdv.user.first_name %> <%= rdv.user.last_name  %></p>
                                 <p>Date : <%= rdv.lesson.date %></p>
                                 <p>Heure : <%= rdv.lesson.beginning %></p>
                                 <p>Durée : <%= rdv.lesson.length %></p>
