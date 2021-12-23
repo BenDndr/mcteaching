@@ -1,0 +1,45 @@
+.white-box {
+    background-color: white;
+    border-radius: 16px;
+    height: 50vh;
+    text-align: left;
+    overflow: scroll;
+}
+
+.white-box::-webkit-scrollbar {
+    width: 0px;
+}
+
+.mes-box {
+    border-radius: 16px;
+}
+
+.chat-form {
+    width: 100%;
+    align-items: center;
+    margin-bottom: .5rem;
+    justify-content: space-between;
+}
+
+.btn-chat {
+    border-radius: 16px;
+    padding: .3rem 1rem;
+    transition: ease .5s;
+    text-align: center;
+    background-color: $blue;
+    color: white;
+
+    &:hover {
+        background: $lightblue;
+        color: white;
+    }
+}
+
+.form-control {
+    border-radius: 12px;
+}
+
+.message_content {
+    margin-bottom: 0;
+    width: 100%;
+}

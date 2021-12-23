@@ -21,10 +21,10 @@ h1, h2 {
 }
 
 .full-page {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     width: 100%;
-    min-height: 100vh;
+    min-height: 82vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,4 +40,9 @@ h1, h2 {
 
 .center {
     text-align: center;
+}
+
+.threerem {
+    height: 10vh;
+    width: 100%;
 }

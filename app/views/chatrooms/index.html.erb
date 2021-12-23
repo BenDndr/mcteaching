@@ -1,0 +1,18 @@
+<div class="full-page yel-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 center">
+                <% if current_user.marie %>
+                    <h2>Index Chatroom</h2>
+                    <% @chatrooms.each do |chatroom| %>
+                    <p><%= link_to chatroom.user.first_name, chatroom_path(chatroom)  %></p>
+                    <% end %>
+                <% else %>
+                    <h2>Chat with Marie</h2>
+                    <p>Besoin d'information ? Une question ? Envie de parler ? Ici tu peux chatter en diret avec Marie</p>
+                    <p><%= link_to "Démarrer la conversation", chatroom_path(@mychatroom.to_a[0].id)  %></p>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
