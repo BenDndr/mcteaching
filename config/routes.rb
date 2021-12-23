@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
-  resources :chatrooms, only: :show do
+  resources :chatrooms, only: [ :index, :show ] do
     resources :messages, only: :create
   end
 
@@ -16,6 +16,5 @@ Rails.application.routes.draw do
 
   namespace :my do
      resources :rdvs, only: :index
-  #   ressources :rdvs, only: :index
   end
 end

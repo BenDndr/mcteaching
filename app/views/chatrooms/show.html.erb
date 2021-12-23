@@ -1,0 +1,25 @@
+<div class="full-page yel-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 center">
+            <% if current_user.marie  %>
+                <h2>Chat with <%=  @chatroom.user.first_name%></h2>
+            <% else %>
+                <h2>Chat with Marie</h2>
+            <% end %>
+                <div id="messages" class="white-box mb-1 p-2" data-chatroom-id="<%= @chatroom.id %>" >
+                    <% @chatroom.messages.each do |message| %>
+                        <%= render "messages/message", message: message  %>
+                    <% end %>
+                </div>
+                <%= simple_form_for ([ @chatroom, @message ]), remote: true, html: { autocomplete: 'off' } do |f| %>
+                    <div class="d-flex chat-form">
+                        <%= f.input :content, label: false, placeholder: "Saisissez votre message", class: "chat-input" %>
+                        <%= f.button :submit, "Envoyer", class: "btn-chat ml-1" %>
+                    </div>
+                <% end %>
+                <%= link_to "Retour", root_path, class: "btn-chat"  %>
+            </div>
+        </div>
+    </div>
+</div>
